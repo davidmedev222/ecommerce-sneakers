@@ -6,10 +6,156 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/app.css">
 </head>
 
 <body>
-    <main>NIKE SNEAKERS</main>
+    <!-- COMPONENT HEADER -->
+    <header class="header">
+        <!-- BUTTON LOGO -->
+        <button class="header-logo">
+            <img src="./img/header-logo.svg" alt="logo jordan">
+        </button>
+        <!-- NAVBAR -->
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav-li">
+                    <a href="#shop" class="nav-a">shop</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#category" class="nav-a">category</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#faq" class="nav-a">faq</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- BUTTON CART -->
+        <button class="header-cart">
+            <span class="header-badge">0</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+        </button>
+    </header>
+    <!-- MAIN -->
+    <main class="main">
+        <!-- COMPONENT CARROUSEL -->
+        <section class="carrousel">
+            <!-- INFO -->
+            <article class="carrousel-art">
+                <span class="carrousel-name">air jordan</span>
+                <h1 class="carrousel-title">xxxv</h1>
+                <button class="carrousel-btn">shop</button>
+            </article>
+            <!-- PICTURE -->
+            <picture class="carrousel-picture">
+                <img class="carrousel-img" src="./img/air-jordan-xxxv.png" alt="air jordan xxxv">
+            </picture>
+        </section>
+        <!-- COMPONENT CATEGORY -->
+        <section class="category">
+            <!-- TITLE -->
+            <h1 class="category-title">category</h1>
+            <!-- CONTENT -->
+            <div class="category-content">
+                <!-- ARTICLE -->
+                <article class="category-art">
+                    <!-- PICTURE -->
+                    <picture class="category-picture">
+                        <img class="category-img" src="./img/category-2017.png" alt="jordan 2017">
+                    </picture>
+                    <!-- INFO -->
+                    <article class="category-info">
+                        <h1 class="category-name">air jordan</h1>
+                        <span class="category-year">2017</span>
+                        <p class="category-description">jordan xxxii pure platinum created in the year 2020 with a
+                            reinforced material and
+                            with a pleasant feeling when stepping on the ground.</p>
+                    </article>
+                </article>
+                <article class="category-art">
+                    <picture class="category-picture">
+                        <img class="category-img" src="./img/category-2018.png" alt="jordan 2018">
+                    </picture>
+                    <article class="category-info">
+                        <h1 class="category-name">air jordan</h1>
+                        <span class="category-year">2018</span>
+                        <p class="category-description">jordan xxxvii future flight created in the year 2020 with a
+                            reinforced material and
+                            with a pleasant feeling when stepping on the ground.</p>
+                    </article>
+                </article>
+                <article class="category-art">
+                    <picture class="category-picture">
+                        <img class="category-img" src="./img/category-2019.png" alt="jordan 2019">
+                    </picture>
+                    <article class="category-info">
+                        <h1 class="category-name">air jordan</h1>
+                        <span class="category-year">2019</span>
+                        <p class="category-description">jordan xxxiv blue void created in the year 2020 with a
+                            reinforced material and
+                            with a pleasant feeling when stepping on the ground.</p>
+                    </article>
+                </article>
+                <article class="category-art">
+                    <picture class="category-picture">
+                        <img class="category-img" src="./img/category-2020.png" alt="jordan 2020">
+                    </picture>
+                    <article class="category-info">
+                        <h1 class="category-name">air jordan</h1>
+                        <span class="category-year">2020</span>
+                        <p class="category-description">jordan xxxv laser crimson created in the year 2020 with a
+                            reinforced material and
+                            with a pleasant feeling when stepping on the ground.</p>
+                    </article>
+                </article>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- COMPONENT PRODUCTS -->
+        <section class="products">
+            <!-- TITLE -->
+            <h3 class="products-title">shop</h3>
+            <!-- CONTENT -->
+            <div class="products-content">
+                <!-- ARTICLE -->
+                <article class="products-art">
+                    <!-- PICTURE -->
+                    <picture class="products-picture">
+                        <!-- PRICE-->
+                        <span class="products-price">$180</span>
+                        <!-- BUTTON GO TO -->
+                        <button class="products-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z" />
+                            </svg>
+                        </button>
+                        <!-- IMAGE -->
+                        <img class="products-img" src="./img/product-turbo-green.png" alt="">
+                    </picture>
+                    <!-- INFO -->
+                    <h4 class="products-name">glacier bold</h4>
+                    <!-- BUTTON ADD TO CART -->
+                    <button class="products-btn">add to cart</button>
+                </article>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
 </body>
 
 </html>
