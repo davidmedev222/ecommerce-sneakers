@@ -117,6 +117,42 @@ svg {
   width: 100%;
   fill: currentColor; }
 
+.header {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template: "logo nav cart" auto / 1fr 1fr 1fr;
+  padding: 1rem; }
+  .header-logo img {
+    grid-area: logo;
+    height: 10vh;
+    width: 10vw; }
+  .header-cart {
+    grid-area: cart;
+    position: relative; }
+  .header-cart svg {
+    width: 3.5vw; }
+  .header-badge {
+    position: absolute;
+    right: 5%;
+    font-size: 1.3vw;
+    font-weight: bold;
+    color: black;
+    background-color: var(--background-primary);
+    border-radius: 100%;
+    padding: 0 0.2rem; }
+
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem; }
+
+.nav-a {
+  font-size: 1.3vw;
+  font-weight: 700; }
+
 .carrousel {
   display: grid;
   justify-items: center;
@@ -246,39 +282,3 @@ svg {
     font-size: 1.3vw;
     border-radius: 1rem;
     padding: 1rem 2rem; }
-
-.header {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  grid-template: "logo nav cart" auto / 1fr 1fr 1fr;
-  padding: 1rem; }
-  .header-logo img {
-    grid-area: logo;
-    height: 10vh;
-    width: 10vw; }
-  .header-cart {
-    grid-area: cart;
-    position: relative; }
-  .header-cart svg {
-    width: 3.5vw; }
-  .header-badge {
-    position: absolute;
-    right: 5%;
-    font-size: 1.3vw;
-    font-weight: bold;
-    color: black;
-    background-color: var(--background-primary);
-    border-radius: 100%;
-    padding: 0 0.2rem; }
-
-.nav-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem; }
-
-.nav-a {
-  font-size: 1.3vw;
-  font-weight: 700; }
