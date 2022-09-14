@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "Crisma Basic",
+        "precio": 350,
+        "imagen": "img/crismabasic.png",
+        "descripcion": "contiene 1 Medallon de Carne, Cheddar, Tomate, Lechuga y Remolacha",
+        "tipo": "Menu"
+    },
+    {
+        "id": 2,
+        "nombre": "Crisma Lite",
+        "precio": 450,
+        "imagen": "img/crismalite.png",
+        "descripcion": "contiene 1 Medallon de Carne, Cheddar, Panceta, Tomate, Lechuga y Condimentos",
+        "tipo": "Menu"
+    },
+    {
+        "id": 3,
+        "nombre": "Crisma Classic",
+        "precio": 550,
+        "imagen": "img/crismaclassic.png",
+        "descripcion": "contiene 1 Medallon de Carne, Cheddar, Panceta, Papas Fritas Tomate, Lechuga y Condimentos",
+        "tipo": "Menu"
+    },
+    {
+        "id": 4,
+        "nombre": "Crisma Black",
+        "precio": 600,
+        "imagen": "img/crismablack.png",
+        "descripcion": "contiene1 Medallon de Carne, Cheddar, Panceta y Condimentos",
+        "tipo": "Menu"
+    },
+    {
+        "id": 5,
+        "nombre": "Crisma Red",
+        "precio": 750,
+        "imagen": "img/crismared.png",
+        "descripcion": "contiene 1 Medallon de Carne, Cheddar, Lechuga y Condimentos",
+        "tipo": "Menu"
+    },
+    {
+        "id": 6,
+        "nombre": "Crisma Mega",
+        "precio": 880,
+        "imagen": "img/crismamega.png",
+        "descripcion": "contiene 2 Medallon de Carne, Cheddar, Panceta y Condimentos",
+        "tipo": "Menu"
+    },
+    {
+        "id": 7,
+        "nombre": "Promo Basic",
+        "precio": 1000,
+        "imagen": "img/promouno.png",
+        "descripcion": "contiene 2 Crismas, Cheddar, Panceta, Papas Fritas, Bebida, Tomate, Lechuga, Condimentos y Papas Fritas",
+        "tipo": "Promo"
+    },
+    {
+        "id": 8,
+        "nombre": "Promo x3",
+        "precio": 1900,
+        "imagen": "img/promodos.png",
+        "descripcion": "contiene 3 Crismas Simples, Cheddar, Pancet, Papas Fritas, Tomate y Lechuga",
+        "tipo": "Promo"
+    },
+    {
+        "id": 9,
+        "nombre": "Promo Vegana",
+        "precio": 550,
+        "imagen": "img/promotres.png",
+        "descripcion": "contiene 1 Crisma Vegana, Tomate, Lechuga, Perejil, Batata Condimentos y Papas Fritas",
+        "tipo": "Promo"
+    }
+]

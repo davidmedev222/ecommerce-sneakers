@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jordan Store</title>
+    <link rel="shortcut icon" href="./img/header-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/app.css">
 </head>
 
@@ -113,49 +114,42 @@
                 </article>
             </div>
         </section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <!-- COMPONENT PRODUCTS -->
         <section class="products">
             <!-- TITLE -->
             <h3 class="products-title">shop</h3>
             <!-- CONTENT -->
             <div class="products-content">
-                <!-- ARTICLE -->
-                <article class="products-art">
-                    <!-- PICTURE -->
-                    <picture class="products-picture">
-                        <!-- PRICE-->
-                        <span class="products-price">$180</span>
-                        <!-- BUTTON GO TO -->
-                        <button class="products-arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z" />
-                            </svg>
-                        </button>
-                        <!-- IMAGE -->
-                        <img class="products-img" src="./img/product-turbo-green.png" alt="">
-                    </picture>
-                    <!-- INFO -->
-                    <h4 class="products-name">glacier bold</h4>
-                    <!-- BUTTON ADD TO CART -->
-                    <button class="products-btn">add to cart</button>
-                </article>
             </div>
         </section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </main>
+    <!-- TEMPLATE PRODUCTS -->
+    <template id="template-products">
+        <!-- ARTICLE -->
+        <article class="products-art">
+            <!-- PICTURE -->
+            <picture class="products-picture">
+                <!-- PRICE-->
+                <span class="products-price">$180</span>
+                <!-- BUTTON GO TO -->
+                <button class="products-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z" />
+                    </svg>
+                </button>
+                <!-- IMAGE -->
+                <img class="products-img" alt="jordan">
+            </picture>
+            <!-- INFO -->
+            <h4 class="products-name">glacier bold</h4>
+            <!-- BUTTON ADD TO CART -->
+            <button class="products-btn">add to cart</button>
+        </article>
+    </template>
+    <script src="./js/components/products/template.js"></script>
+    <script src="./js/components/products/functions.js"></script>
+    <script src="./js/events.js"></script>
 </body>
 
 </html>
