@@ -32,9 +32,10 @@ body {
   background-color: var(--background-primary);
   hyphens: auto; }
   body::-webkit-scrollbar {
-    width: 7px; }
+    width: 0.5rem; }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--component-primary); }
+    background-color: black;
+    border-radius: 1rem; }
 
 img,
 picture,
@@ -122,25 +123,28 @@ svg {
   justify-items: center;
   align-items: center;
   grid-template: "logo nav cart" auto / 1fr 1fr 1fr;
+  position: sticky;
+  top: 0;
   padding: 1rem; }
   .header-logo img {
     grid-area: logo;
+    width: 10vw;
     height: 10vh;
-    width: 10vw; }
+    object-fit: contain; }
   .header-cart {
     grid-area: cart;
-    position: relative; }
-  .header-cart svg {
+    position: relative;
     width: 3.5vw; }
   .header-badge {
     position: absolute;
-    right: 5%;
+    right: -10%;
+    top: -10%;
     font-size: 1.3vw;
     font-weight: bold;
     color: black;
-    background-color: var(--background-primary);
-    border-radius: 100%;
-    padding: 0 0.2rem; }
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.25rem; }
 
 .nav-ul {
   display: flex;
@@ -151,7 +155,126 @@ svg {
 
 .nav-a {
   font-size: 1.3vw;
-  font-weight: 700; }
+  font-weight: 800; }
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 2.5rem; }
+  .cart-title {
+    font-size: 3vw;
+    font-weight: 900; }
+  .cart-content {
+    max-height: 30vh;
+    overflow-y: scroll; }
+    .cart-content::-webkit-scrollbar {
+      width: 0.5rem; }
+    .cart-content::-webkit-scrollbar-thumb {
+      background-color: black;
+      border-radius: 1rem; }
+  .cart-product {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template: "image art info" auto / 1fr 1fr 1fr;
+    max-width: 75vw;
+    position: relative; }
+  .cart-picture {
+    grid-area: image;
+    max-width: 50%; }
+  .cart-art {
+    grid-area: art;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .cart-name {
+    font-size: 1.5vw;
+    font-weight: bold; }
+  .cart-color {
+    color: grey;
+    font-size: 1vw;
+    font-weight: bold; }
+  .cart-price {
+    font-size: 1vw;
+    font-weight: bold; }
+  .cart-info {
+    grid-area: info;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; }
+  .cart-btn {
+    width: 2.5vw;
+    border-radius: 100%;
+    padding: 0.25rem;
+    background-color: lightgrey; }
+  .cart-delete {
+    position: absolute;
+    right: 5%;
+    padding: 0.5rem; }
+  .cart-quantity {
+    font-size: 1.5vw;
+    font-weight: bold; }
+  .cart-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 1rem; }
+  .cart-off {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem; }
+  .cart-cupon {
+    width: 50%;
+    border: grey 1px solid;
+    border-radius: 1rem;
+    padding: 0.5rem; }
+    .cart-cupon::placeholder {
+      font-size: 1.25vw;
+      font-weight: 300;
+      text-transform: capitalize;
+      text-align: center; }
+    .cart-cupon:focus {
+      border-color: 1px solid red;
+      outline: 1.35px solid black; }
+  .cart-apply, .cart-checkout {
+    width: 50%;
+    color: white;
+    font-size: 1.3vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: black; }
+  .cart-buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%; }
+  .cart-total {
+    font-size: 1.5vw;
+    font-weight: bold; }
+  .cart-description {
+    font-size: 1vw;
+    font-weight: bold;
+    color: grey; }
+  .cart-price {
+    font-size: 1.3vw;
+    font-weight: bold; }
+  .cart-checkout {
+    padding: 0.75rem;
+    width: 100%; }
 
 .carrousel {
   display: grid;

@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="./css/app.css">
 </head>
 
-<body>
+<body id="home">
     <!-- COMPONENT HEADER -->
     <header class="header">
-        <!-- BUTTON LOGO -->
-        <button class="header-logo">
+        <!-- ANCHOR LOGO -->
+        <a href="#home" class="header-logo">
             <img src="./img/header-logo.svg" alt="logo jordan">
-        </button>
+        </a>
         <!-- NAVBAR -->
         <nav class="nav">
             <ul class="nav-ul">
@@ -32,14 +32,14 @@
                 </li>
             </ul>
         </nav>
-        <!-- BUTTON CART -->
-        <button class="header-cart">
+        <!-- ANCHOR CART -->
+        <a href="./pages/cart.html" class="header-cart">
             <span class="header-badge">0</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                 <path
                     d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
             </svg>
-        </button>
+        </a>
     </header>
     <!-- MAIN -->
     <main class="main">
@@ -57,7 +57,7 @@
             </picture>
         </section>
         <!-- COMPONENT CATEGORY -->
-        <section class="category">
+        <section id="category" class="category">
             <!-- TITLE -->
             <h1 class="category-title">category</h1>
             <!-- CONTENT -->
@@ -115,8 +115,8 @@
                 </article>
             </div>
         </section>
-        <!-- COMPONENT PRODUCTS -->
-        <section class="products">
+        <!-- COMPONENT SHOP -->
+        <section id="shop" class="products">
             <!-- TITLE -->
             <h3 class="products-title">shop</h3>
             <!-- CONTENT -->
@@ -124,7 +124,7 @@
             </div>
         </section>
     </main>
-    <!-- TEMPLATE PRODUCTS -->
+    <!-- TEMPLATE SHOP -->
     <template id="template-products">
         <!-- ARTICLE -->
         <article class="products-art">
@@ -152,9 +152,10 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- SCRIPTS -->
     <script src="./js/components/products/template.js"></script>
-    <script src="./js/components/products/functions.js"></script>
-    <script src="./js/components/cart/template.js"></script>
-    <script src="./js/components/cart/functions.js"></script>
+    <script src="./js/components/products/fetch.js"></script>
+    <script src="./js/components/products/view.js"></script>
+    <script src="./js/components/cart/global.js"></script>
+    <script src="./js/components/cart/add.js"></script>
     <script src="./js/events.js"></script>
 </body>
 

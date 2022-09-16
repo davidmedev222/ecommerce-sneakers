@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Store | Cart</title>
+    <link rel="shortcut icon" href="../img/header-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+
+<body>
+    <!-- COMPONENT HEADER -->
+    <header class="header">
+        <!-- ANCHOR LOGO -->
+        <a class="header-logo" href="../index.html#home">
+            <img src="../img/header-logo.svg" alt="logo jordan">
+        </a>
+        <!-- NAVBAR -->
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav-li">
+                    <a href="../index.html#shop" class="nav-a">shop</a>
+                </li>
+                <li class="nav-li">
+                    <a href="../index.html#category" class="nav-a">category</a>
+                </li>
+                <li class="nav-li">
+                    <a href="../index.html#faq" class="nav-a">faq</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- ANCHOR CART -->
+        <a class="header-cart" href="#cart">
+            <span class="header-badge">0</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+        </a>
+    </header>
+    <!-- MAIN -->
+    <main class="main">
+        <section class="cart">
+            <h2 class="cart-title">my cart</h2>
+            <div class="cart-content">
+            </div>
+            <div class="cart-end">
+            </div>
+        </section>
+    </main>
+    <!-- TEMPLATE CART PRODUCT -->
+    <template id="template-cart-product">
+        <div class="cart-product">
+            <picture class="cart-picture">
+                <img src="../img/product-1.webp" alt="jordan class=" cart-image">
+            </picture>
+            <article class="cart-art">
+                <h3 class="cart-name">turbo green</h3>
+                <span class="cart-color">black / white</span>
+                <span class="cart-price">123 USD</span>
+            </article>
+            <div class="cart-info">
+                <button class="cart-btn cart-decrease">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </button>
+                <span class="cart-quantity">1</span>
+                <button class="cart-btn cart-increase">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+                    </svg>
+                </button>
+            </div>
+            <button class="cart-btn cart-delete">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                        d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
+                </svg>
+            </button>
+        </div>
+    </template>
+    <!-- TEMPLATE CART END -->
+    <template id="template-cart-end">
+        <div class="cart-off">
+            <input class="cart-cupon" type="text" name="cupon" id="cupon" placeholder="promo code">
+            <button class="cart-apply">apply</button>
+        </div>
+        <article class="cart-buy">
+            <h3 class="cart-total">total</h3>
+            <span class="cart-description">(8) products</span>
+            <span class="cart-price">236 USD</span>
+        </article>
+        <button class="cart-checkout">checkout</button>
+    </template>
+    <!-- SCRIPTS -->
+    <script src="../js/components/cart/global.js"></script>
+    <script src="../js/components/cart/add.js"></script>
+    <script src="../js/components/cart/view.js"></script>
+    <script src="../js/events.js"></script>
+</body>
+
+</html>
