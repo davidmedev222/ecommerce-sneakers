@@ -94,3 +94,31 @@ const cartDelete = (ev) => {
     cartViewBadge();
     cartLoad();
 };
+
+//* FUNCION CUPON DE DESCUENTO
+const cartCupon = () => {
+    //? VALOR DEL NODO INPUT DEL CUPON
+    const inputCupon = document.querySelector(".cart-cupon").value;
+    //? SI ES IGUAL SE APLICA EL CUPON, SINO SE MUESTRA UNA NOTIFICACION
+    inputCupon === cupon ? cartCuponApply() : cartNotification("CODE INVALID");
+};
+//? FUNCION APLICAR CUPON DE DESCUENTO
+const cartCuponApply = () => {
+    //? NODOS VACIOS AL EJECUTAR FUNCION CART CUPON APPLY
+    nodoCartContent.textContent = "";
+    nodoCartEnd.textContent = "";
+    //? SE ACTUALIZA EL VALOR DEL CUPON
+    cupon = "DAVIDMEDEV";
+    cartLocalStorage("cart-cupon", JSON.stringify(cupon));
+    //? SE MODIFICA EL PRECIO EN LOS PRODUCTOS
+    cart.forEach((cadaProduct) => {
+        cadaProduct.price = cadaProduct.price - 100;
+    });
+    //? FUNCIONES A EJECUTAR
+    cartLocalStorage("products-cart", JSON.stringify(cart));
+    cartNotification("CODE APPLIED");
+    cartLoad();
+    //? SE BLOQUEAN EL INPUT Y BOTON DEL CUPON
+    document.querySelector(".cart-cupon").disabled = true;
+    document.querySelector(".cart-apply").disabled = true;
+};

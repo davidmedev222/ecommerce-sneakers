@@ -11,4 +11,7 @@ document.addEventListener("click", (ev) => {
 
     //? EVENTO PARA EL NODO BTN ELIMINAR PRODUCT
     ev.target.matches(".cart-delete, .cart-delete svg, .cart-delete svg path ") && cartDelete(ev);
+
+    //? EVENTO PARA EL NODO BTN APLICAR CUPON
+    ev.target.matches(".cart-apply") && cartCupon();
 });

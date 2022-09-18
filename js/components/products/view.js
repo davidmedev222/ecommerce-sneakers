@@ -2,6 +2,8 @@
 const productsView = (contenido) => {
     //? APLICAR A CADA PRODUCTO DEL ARRAY
     contenido.forEach((cadaProduct) => {
+        //? NODO VACIO AL EJECUTAR FUNCION PRODUCTS VIEW
+        nodoProductsContent.textContent = "";
         //? CLONACION DEL TEMPLATE PRODUCTS
         const clonProducts = templateProducts.cloneNode(true);
         clonProducts.querySelector(".products-price").textContent = `$${cadaProduct.price}`;

@@ -15,7 +15,7 @@ const cartAdd = (ev) => {
     //? FUNCIONES A EJECUTAR
     cartLocalStorage("products-cart", JSON.stringify(cart));
     cartViewBadge();
-    cartNotification();
+    cartNotification("ADDED TO CART");
 };
 
 //* FUNCION GUARDAR PRODUCTOS AGREGADOS A LOCAL STORAGE
@@ -25,11 +25,11 @@ const cartLocalStorage = (clave, valor) => {
 };
 
 //* FUNCION NOTIFICACION DE AGREGADO AL CARRITO
-const cartNotification = () => {
+const cartNotification = (message) => {
     Toastify({
-        text: "SE AGREGO AL CARRITO",
+        text: message,
         duration: 3000,
-        position: "right",
+        position: "left",
         style: {
             background: "#181818",
             color: "#e6e6e6",
