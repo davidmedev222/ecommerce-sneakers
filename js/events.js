@@ -21,4 +21,7 @@ document.addEventListener("click", (ev) => {
     //? EVENTO PARA EL NODO BTN CERRAR PESTAÑA FLOTANTE
     ev.target.matches(".products-window-close, .products-window-close svg, .products-window-close svg path") &&
         windowClose();
+
+    //? EVENTO PARA EL NODO GENERAR ORDEN DE COMPRA
+    ev.target.matches(".faq-generate") && faq();
 });
