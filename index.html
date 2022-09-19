@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Store</title>
+    <title>Jordan Store | Home</title>
     <link rel="shortcut icon" href="./img/header-logo.svg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/app.css">
@@ -49,7 +49,7 @@
             <article class="carrousel-art">
                 <span class="carrousel-name">air jordan</span>
                 <h1 class="carrousel-title">xxxv</h1>
-                <button class="carrousel-btn">shop</button>
+                <a href="#shop" class="carrousel-btn">shop</a>
             </article>
             <!-- PICTURE -->
             <picture class="carrousel-picture">
@@ -77,10 +77,13 @@
                             with a pleasant feeling when stepping on the ground.</p>
                     </article>
                 </article>
+                <!-- ARTICLE -->
                 <article class="category-art">
+                    <!-- PICTURE -->
                     <picture class="category-picture">
                         <img class="category-img" src="./img/category-2018.png" alt="jordan 2018">
                     </picture>
+                    <!-- INFO -->
                     <article class="category-info">
                         <h1 class="category-name">air jordan</h1>
                         <span class="category-year">2018</span>
@@ -89,10 +92,13 @@
                             with a pleasant feeling when stepping on the ground.</p>
                     </article>
                 </article>
+                <!-- ARTICLE -->
                 <article class="category-art">
+                    <!-- PICTURE -->
                     <picture class="category-picture">
                         <img class="category-img" src="./img/category-2019.png" alt="jordan 2019">
                     </picture>
+                    <!-- INFO -->
                     <article class="category-info">
                         <h1 class="category-name">air jordan</h1>
                         <span class="category-year">2019</span>
@@ -101,10 +107,13 @@
                             with a pleasant feeling when stepping on the ground.</p>
                     </article>
                 </article>
+                <!-- ARTICLE -->
                 <article class="category-art">
+                    <!-- PICTURE -->
                     <picture class="category-picture">
                         <img class="category-img" src="./img/category-2020.png" alt="jordan 2020">
                     </picture>
+                    <!-- INFO -->
                     <article class="category-info">
                         <h1 class="category-name">air jordan</h1>
                         <span class="category-year">2020</span>
@@ -119,8 +128,28 @@
         <section id="shop" class="products">
             <!-- TITLE -->
             <h3 class="products-title">shop</h3>
+            <!-- SELECT -->
+            <div class="products-category">
+                <select class="products-select" name="select">
+                    <!-- CATEGORY -->
+                    <optgroup class="products-optgroup" label="CATEGORY">
+                        <option class="products-option" value="ALL">ALL</option>
+                        <option class="products-option" value="2017">2017</option>
+                        <option class="products-option" value="2018">2018</option>
+                        <option class="products-option" value="2019">2019</option>
+                        <option class="products-option" value="2020">2020</option>
+                    </optgroup>
+                </select>
+                <!-- FILTER -->
+                <button class="products-filter">FILTER</button>
+            </div>
             <!-- CONTENT -->
-            <div class="products-content">
+            <div class="products-content"></div>
+            <!-- WINDOW PRODUCTO -->
+            <div class="products-window">
+                <!-- WINDOW CONTENT -->
+                <div class="products-window-content">
+                </div>
             </div>
         </section>
     </main>
@@ -132,11 +161,11 @@
             <picture class="products-picture">
                 <!-- PRICE-->
                 <span class="products-price">$180</span>
-                <!-- BUTTON GO TO -->
+                <!-- BUTTON MORE INFO -->
                 <button class="products-arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z" />
+                        <path
+                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
                     </svg>
                 </button>
                 <!-- IMAGE -->
@@ -148,13 +177,42 @@
             <button class="products-btn">add to cart</button>
         </article>
     </template>
+    <!-- TEMPLATE-WINDOW -->
+    <template id="template-window">
+        <!-- BUTTON CLOSE WINDOW -->
+        <button class="products-window-close">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+            </svg>
+        </button>
+        <!-- IMAGES -->
+        <div class="products-window-images">
+            <picture class="products-window-picture">
+                <img class="products-window-image" src="./img/product-13(2).webp" alt="">
+                <img class="products-window-image" src="./img/product-13.webp" alt="">
+            </picture>
+        </div>
+        <!-- INFO -->
+        <article class="products-window-info">
+            <span class="products-window-collection">jordan brand 2019</span>
+            <h5 class="products-window-name">infinite green</h5>
+            <span class="products-window-color">blue / white</span>
+            <h6 class="products-window-price">202 USD</h6>
+            <article class="products-window-details">
+                <span class="products-window-designer">arturo asdasd</span>
+                <span class="products-window-location">beverton asdsa</span>
+                <span class="products-window-launch">october 12312</span>
+            </article>
+        </article>
+    </template>
     <!-- LIBRARY TOASTIFY -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- SCRIPTS -->
     <script src="./js/components/products/template.js"></script>
     <script src="./js/components/products/fetch.js"></script>
     <script src="./js/components/products/view.js"></script>
-    <script src="./js/components/cart/global.js"></script>
+    <script src="./js/components/global.js"></script>
     <script src="./js/components/cart/add.js"></script>
     <script src="./js/events.js"></script>
 </body>

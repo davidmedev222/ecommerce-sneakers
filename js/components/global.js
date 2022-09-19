@@ -14,3 +14,10 @@ const cartViewBadge = () => {
 };
 //? SE EJECUTA PARA VISUALIZAR AL CARGAR EL SITIO
 cartViewBadge();
+
+//* FUNCION PARA CREAR ATRIBUTO DATA EN LOS NODOS BTN, SVG Y PATH
+const AttributeDataId = (clon, btn, indice, product) => {
+    clon.querySelectorAll(btn)[indice].dataset.id = product.id;
+    clon.querySelectorAll(`${btn} svg`)[indice].dataset.id = product.id;
+    clon.querySelectorAll(`${btn} svg path`)[indice].dataset.id = product.id;
+};

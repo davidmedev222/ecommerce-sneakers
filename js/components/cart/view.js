@@ -8,13 +8,6 @@ const nodoCartEnd = document.querySelector(".cart-end");
 const templateCartEnd = document.getElementById("template-cart-end").content;
 const fragmentCartEnd = document.createDocumentFragment();
 
-//* FUNCION PARA CREAR ATRIBUTO DATA EN LOS BTN DISMINUIR, AUMENTAR Y ELIMINAR PRODUCTO
-const cartAttributeData = (clon, btn, indice, product) => {
-    clon.querySelectorAll(btn)[indice].dataset.id = product.id;
-    clon.querySelectorAll(`${btn} svg`)[indice].dataset.id = product.id;
-    clon.querySelectorAll(`${btn} svg path`)[indice].dataset.id = product.id;
-};
-
 //* FUNCION PARA VISUALIZAR EL CARRITO
 const cartView = () => {
     //? APLICAR A CADA PRODUCTO DEL CARRITO
@@ -26,9 +19,9 @@ const cartView = () => {
         clonCartProduct.querySelector(".cart-color").textContent = cadaProduct.color;
         clonCartProduct.querySelector(".cart-price").textContent = `${cadaProduct.price * cadaProduct.quantity} USD`;
         clonCartProduct.querySelector(".cart-quantity").textContent = cadaProduct.quantity;
-        cartAttributeData(clonCartProduct, ".cart-btn", 0, cadaProduct);
-        cartAttributeData(clonCartProduct, ".cart-btn", 1, cadaProduct);
-        cartAttributeData(clonCartProduct, ".cart-btn", 2, cadaProduct);
+        AttributeDataId(clonCartProduct, ".cart-btn", 0, cadaProduct);
+        AttributeDataId(clonCartProduct, ".cart-btn", 1, cadaProduct);
+        AttributeDataId(clonCartProduct, ".cart-btn", 2, cadaProduct);
         //? ADJUNTO EL CLON MODIFICADO AL FRAGMENT CART PRODUCT
         fragmentCartProduct.appendChild(clonCartProduct);
     });

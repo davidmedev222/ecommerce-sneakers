@@ -14,4 +14,11 @@ document.addEventListener("click", (ev) => {
 
     //? EVENTO PARA EL NODO BTN APLICAR CUPON
     ev.target.matches(".cart-apply") && cartCupon();
+
+    //? EVENTO PARA EL NODO BTN MOSTRAR PESTAÑA FLOTANTE
+    ev.target.matches(".products-arrow, .products-arrow svg, .products-arrow svg path") && windowView(ev);
+
+    //? EVENTO PARA EL NODO BTN CERRAR PESTAÑA FLOTANTE
+    ev.target.matches(".products-window-close, .products-window-close svg, .products-window-close svg path") &&
+        windowClose();
 });
