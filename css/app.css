@@ -125,47 +125,50 @@ svg {
   grid-template: "logo nav cart" auto / 1fr 1fr 1fr;
   position: sticky;
   top: 0;
-  padding: 1rem; }
-  .header-logo img {
+  z-index: 1;
+  padding: clamp(0.5rem, 1rem, 2rem); }
+  .header-logo {
     grid-area: logo;
-    width: 10vw;
-    height: 10vh;
-    object-fit: contain; }
+    width: clamp(3.5rem, 5.5vw, 11rem); }
   .header-cart {
     grid-area: cart;
     position: relative;
-    width: 3.5vw; }
+    width: clamp(2.5rem, 3.5vw, 7rem); }
   .header-badge {
     position: absolute;
     right: -10%;
     top: -10%;
-    font-size: 1.3vw;
+    font-size: clamp(0.85rem, 1.3vw, 2.6rem);
     font-weight: bold;
     color: black;
     background-color: white;
     border-radius: 1rem;
-    padding: 0.25rem; }
+    padding: 0.25em; }
 
 .nav-ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 5rem; }
+  gap: clamp(2.5rem, 5vw, 10rem); }
 
 .nav-a {
-  font-size: 1.3vw;
+  font-size: clamp(0.75rem, 1.5vw, 3rem);
   font-weight: 800; }
+
+@media screen and (max-width: 480px) {
+  .nav {
+    display: none; } }
 
 .cart {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.75rem;
-  padding: 2.5rem; }
+  gap: clamp(0rem, 2.5vw, 5rem);
+  padding: clamp(1.25rem, 2.5vw, 5rem) 0; }
   .cart-title {
-    font-size: 3vw;
+    font-size: clamp(2rem, 4vw, 8rem);
     font-weight: 900; }
   .cart-content {
     max-height: 30vh;
@@ -184,7 +187,7 @@ svg {
     position: relative; }
   .cart-picture {
     grid-area: image;
-    max-width: 50%; }
+    max-width: 60%; }
   .cart-art {
     grid-area: art;
     display: flex;
@@ -192,14 +195,14 @@ svg {
     justify-content: center;
     align-items: center; }
   .cart-name {
-    font-size: 1.5vw;
+    font-size: clamp(0.85rem, 1.5vw, 3rem);
     font-weight: bold; }
-  .cart-color {
+  .cart-color, .cart-description {
     color: grey;
-    font-size: 1vw;
+    font-size: clamp(0.6rem, 1vw, 2rem);
     font-weight: bold; }
   .cart-price {
-    font-size: 1vw;
+    font-size: clamp(0.75rem, 1.3vw, 2.6rem);
     font-weight: bold; }
   .cart-info {
     grid-area: info;
@@ -207,40 +210,42 @@ svg {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1rem; }
+    gap: clamp(0.75rem, 1.5vw, 3rem); }
   .cart-btn {
-    width: 2.5vw;
+    width: clamp(1.75rem, 2.5vw, 5rem);
     border-radius: 100%;
-    padding: 0.25rem;
+    padding: 0.25em;
     background-color: lightgrey; }
   .cart-delete {
     position: absolute;
-    right: 5%;
-    padding: 0.5rem; }
-  .cart-quantity {
-    font-size: 1.5vw;
+    right: 3%;
+    background-color: transparent; }
+  .cart-quantity, .cart-total {
+    font-size: clamp(0.85rem, 1.5vw, 3rem);
     font-weight: bold; }
   .cart-end {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    gap: 1rem; }
+    width: 70%;
+    gap: clamp(0.65rem, 1.25vw, 2.5rem); }
   .cart-off {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 1rem; }
+    gap: clamp(0.5rem, 1vw, 2rem); }
   .cart-cupon {
-    width: 50%;
+    width: 100%;
+    font-size: clamp(0.75rem, 1.3vw, 2.6rem);
+    font-weight: bold;
     border: grey 1px solid;
-    border-radius: 1rem;
-    padding: 0.5rem; }
+    border-radius: 3rem;
+    padding: 1em 2em; }
     .cart-cupon::placeholder {
-      font-size: 1.25vw;
+      font-size: clamp(0.75rem, 1.3vw, 2.6rem);
       font-weight: 300;
       text-transform: capitalize;
       text-align: center; }
@@ -248,33 +253,36 @@ svg {
       border-color: 1px solid red;
       outline: 1.35px solid black; }
   .cart-apply, .cart-checkout {
-    width: 50%;
+    width: 100%;
     color: white;
-    font-size: 1.3vw;
+    background-color: black;
+    font-size: clamp(0.75rem, 1.3vw, 2.6rem);
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 1rem;
-    padding: 0.5rem;
-    background-color: black; }
+    border-radius: 3rem;
+    padding: 1em 2em; }
   .cart-buy {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     width: 100%; }
-  .cart-total {
-    font-size: 1.5vw;
-    font-weight: bold; }
-  .cart-description {
-    font-size: 1vw;
-    font-weight: bold;
-    color: grey; }
-  .cart-price {
-    font-size: 1.3vw;
-    font-weight: bold; }
   .cart-checkout {
-    padding: 0.75rem;
     width: 100%; }
+
+@media screen and (max-width: 768px) {
+  .cart-content {
+    max-height: 45vh; }
+  .cart-product {
+    grid-template: "image art" auto "info info" auto / 1fr 1fr;
+    gap: 0.75rem; }
+  .cart-picture {
+    max-width: none; }
+  .cart-off {
+    flex-direction: column; }
+  .cart-delete {
+    bottom: 0;
+    right: 10%; } }
 
 .carrousel {
   display: grid;
@@ -291,10 +299,10 @@ svg {
     height: 100%;
     position: relative; }
   .carrousel-title {
-    font-size: 6.5vw;
+    font-size: clamp(3rem, 6.5vw, 13rem);
     font-weight: 900; }
   .carrousel-name {
-    font-size: 4.5vw;
+    font-size: clamp(2.25rem, 4.5vw, 10rem);
     font-weight: 900;
     writing-mode: vertical-lr;
     position: absolute;
@@ -303,30 +311,34 @@ svg {
   .carrousel-btn {
     color: white;
     background-color: black;
-    font-size: 1.5vw;
+    font-size: clamp(0.75rem, 1.5vw, 3rem);
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 3rem;
-    padding: 1rem 2rem; }
+    padding: 1em 3em; }
   .carrousel-picture {
     grid-area: img; }
+
+@media screen and (max-width: 768px) {
+  .carrousel-name {
+    visibility: hidden; } }
 
 .category {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
-  padding: 2.5rem; }
+  gap: clamp(1.25rem, 2.5vw, 5rem);
+  padding: 2.5rem clamp(1rem, 3vw, 6rem); }
   .category-title {
-    font-size: 5vw;
+    font-size: clamp(2.5rem, 5vw, 10rem);
     font-weight: 900; }
   .category-content {
     display: grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem; }
+    gap: clamp(0.5rem, 1vw, 2rem); }
   .category-art {
     display: grid;
     justify-items: center;
@@ -342,29 +354,32 @@ svg {
     align-items: center;
     grid-area: info; }
   .category-name {
-    font-size: 3vw;
+    font-size: clamp(1.5rem, 3vw, 6rem);
     font-weight: 900; }
   .category-year {
-    font-size: 7vw;
+    font-size: clamp(3.5rem, 7vw, 14rem);
     font-weight: 900;
     position: absolute;
-    z-index: -1;
-    opacity: 0.25; }
+    opacity: 0.25;
+    z-index: -1; }
   .category-description {
-    font-size: 0.9vw;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding: 0 1rem; }
+    font-size: clamp(0.55rem, 1vw, 2rem);
+    font-weight: 450;
+    text-transform: capitalize; }
+
+@media screen and (max-width: 525px) {
+  .category-content {
+    grid-template-columns: 1fr; } }
 
 .products {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
-  padding: 2.5rem; }
+  gap: clamp(1.25rem, 2.5vw, 5rem);
+  padding: clamp(1.25rem, 2.5vw, 5rem) 0; }
   .products-title {
-    font-size: 5vw;
+    font-size: clamp(2.5rem, 5vw, 10rem);
     font-weight: 900; }
   .products-category {
     display: flex;
@@ -372,59 +387,61 @@ svg {
     justify-content: end;
     align-items: center;
     width: 75%;
-    gap: 1.5rem; }
+    gap: clamp(0.75rem, 1.5vw, 3rem); }
   .products-filter, .products-select {
-    font-size: 1.3vw;
+    font-size: clamp(0.75rem, 1.3vw, 2.6rem);
     font-weight: bold;
     color: white;
     background-color: black;
     border-radius: 1rem;
-    padding: 0.5rem 1rem; }
+    padding: 0.5em 1.5em; }
   .products-optgroup {
-    font-size: 1.5vw; }
+    font-size: clamp(0.75rem, 1.5vw, 3rem); }
   .products-option {
-    font-weight: 800;
     color: black;
-    background-color: whitesmoke; }
+    background-color: whitesmoke;
+    font-weight: 800; }
   .products-content {
     display: grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem; }
+    gap: clamp(0.5rem, 1vw, 2rem); }
   .products-art {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
-    gap: 1rem; }
+    padding: clamp(0.75rem, 1.5rem, 3rem);
+    gap: clamp(0.5rem, 1vw, 2rem); }
   .products-picture {
     position: relative; }
   .products-price {
-    font-size: 1.5vw;
+    font-size: clamp(1.25rem, 1.5vw, 3rem);
     font-weight: 600;
     position: absolute;
     top: 5%;
+    left: 7.5%;
     color: whitesmoke;
     background-color: black;
     transform: rotate(-45deg);
-    padding: 0 1rem; }
+    padding: 0 1em; }
   .products-arrow {
     position: absolute;
-    right: 3%;
-    width: 2.5vw; }
+    top: 0;
+    right: 7.5%;
+    width: clamp(2rem, 3vw, 6rem); }
   .products-name {
-    font-size: 2.3vw;
+    font-size: clamp(1.75rem, 2.3vw, 4.6rem);
     font-weight: 800; }
   .products-btn {
-    font-size: 1.3vw;
+    font-size: clamp(0.85rem, 1.3vw, 2.6rem);
     font-weight: bold;
     text-transform: uppercase;
     color: white;
     background-color: black;
     border-radius: 3rem;
-    padding: 1rem 2rem; }
+    padding: 1em 2em; }
   .products-window {
     display: none;
     width: 100vw;
@@ -433,7 +450,8 @@ svg {
     top: 0;
     left: 0;
     background-color: var(--background-primary);
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    z-index: 2; }
     .products-window::-webkit-scrollbar {
       width: 0.5rem; }
     .products-window-visibility {
@@ -443,12 +461,13 @@ svg {
       justify-items: center;
       align-items: center;
       grid-template: "images info" auto / 55% 45%;
-      position: relative; }
+      position: relative;
+      height: 100%; }
     .products-window-close {
       position: absolute;
       top: 5%;
       right: 5%;
-      width: 5vw; }
+      width: clamp(3rem, 5vw, 10rem); }
     .products-window-picture {
       grid-area: images; }
     .products-window-info {
@@ -458,55 +477,71 @@ svg {
       justify-content: center;
       align-items: center; }
     .products-window-collection, .products-window-color, .products-window-designer, .products-window-location, .products-window-launch {
-      font-size: 1.5vw;
+      font-size: clamp(0.75rem, 1.5vw, 3rem);
       font-weight: bold;
       color: grey; }
     .products-window-name, .products-window-price {
-      font-size: 5vw;
+      font-size: clamp(2.5rem, 5vw, 10rem);
       font-weight: bold; }
     .products-window-details {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
+      gap: clamp(0.75rem, 1.5vw, 3rem);
       margin: 3rem 0 0 0; }
     .products-window-designer, .products-window-location, .products-window-launch {
       color: grey; }
+
+@media screen and (max-width: 840px) {
+  .products-content {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 570px) {
+  .products-content {
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 900px) {
+  .products-window-content {
+    grid-template: "images images" auto "info info" auto / 1fr 1fr;
+    padding: clamp(0rem, 5vw, 10rem); }
+  .products-window-info {
+    padding: clamp(0rem, 7.5vw, 15rem); } }
 
 .faq {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
-  padding: 2.5rem; }
+  gap: clamp(1.25rem, 2.5vw, 5rem);
+  padding: clamp(1.25rem, 2.5rem, 5rem); }
   .faq-title {
-    font-size: 5vw;
+    font-size: clamp(2.5rem, 5vw, 10rem);
     font-weight: 900; }
   .faq-li {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 2.5vw;
+    gap: clamp(0.5rem, 1vw, 2rem);
+    font-size: clamp(1rem, 2.5vw, 5rem);
     font-weight: bold;
+    text-align: center;
     text-transform: uppercase; }
   .faq-response {
     color: grey;
-    font-size: 1.5vw;
-    padding: 1rem; }
+    font-size: clamp(0.75rem, 1.5vw, 3rem);
+    padding: 1em; }
   .faq-generate {
-    font-size: 1.5vw;
+    font-size: clamp(0.85rem, 1.3vw, 2.6rem);
     font-weight: bold;
     text-transform: uppercase;
     color: white;
     background-color: black;
     border-radius: 3rem;
-    padding: 1rem 2rem; }
+    padding: 1em 2em; }
   .faq-order {
     display: none;
-    font-size: 5vw; }
+    font-size: clamp(2.5rem, 5vw, 10rem); }
     .faq-order-visibility {
       display: block; }
