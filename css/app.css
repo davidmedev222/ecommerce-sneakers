@@ -284,6 +284,13 @@ svg {
     bottom: 0;
     right: 10%; } }
 
+.toastify {
+  background: black;
+  font-size: clamp(0.85rem, 1.5vw, 3rem);
+  font-weight: bold;
+  border-radius: 3rem;
+  margin: clamp(4rem, 5.5vw, 11rem) 0 0 0; }
+
 .carrousel {
   display: grid;
   justify-items: center;
@@ -518,12 +525,13 @@ svg {
   .faq-title {
     font-size: clamp(2.5rem, 5vw, 10rem);
     font-weight: 900; }
-  .faq-li {
+  .faq-ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: clamp(0.5rem, 1vw, 2rem);
+    gap: clamp(1.5rem, 3vw, 6rem); }
+  .faq-li {
     font-size: clamp(1rem, 2.5vw, 5rem);
     font-weight: bold;
     text-align: center;
@@ -539,9 +547,12 @@ svg {
     color: white;
     background-color: black;
     border-radius: 3rem;
+    margin: auto;
     padding: 1em 2em; }
   .faq-order {
     display: none;
     font-size: clamp(2.5rem, 5vw, 10rem); }
     .faq-order-visibility {
       display: block; }
+  .faq-strong {
+    color: black; }
