@@ -46,7 +46,9 @@ const productsWindowView = (content) => {
         //? CLONACION DEL TEMPLATE WINDOW
         const clonWindow = templateWindow.cloneNode(true);
         clonWindow.querySelectorAll(".products-window-image")[0].setAttribute("src", `./img/${elProduct.imageOne}`);
+        clonWindow.querySelectorAll(".products-window-image")[0].setAttribute("alt", `${elProduct.name}`);
         clonWindow.querySelectorAll(".products-window-image")[1].setAttribute("src", `./img/${elProduct.imageTwo}`);
+        clonWindow.querySelectorAll(".products-window-image")[1].setAttribute("alt", `${elProduct.name}`);
         clonWindow.querySelector(".products-window-collection").textContent = `${elProduct.collection} ${elProduct.year}`;
         clonWindow.querySelector(".products-window-name").textContent = elProduct.name;
         clonWindow.querySelector(".products-window-color").textContent = elProduct.color;

@@ -16,7 +16,7 @@
     <header class="header">
         <!-- ANCHOR LOGO -->
         <a class="header-logo" href="../index.html#home">
-            <img src="../img/header-logo.svg" alt="logo jordan">
+            <img src="../img/header-logo.svg" alt="logo jordan" loading="lazy">
         </a>
         <!-- NAVBAR -->
         <nav class="nav">
@@ -43,12 +43,14 @@
     </header>
     <!-- MAIN -->
     <main class="main">
+        <!-- COMPONENT CART -->
         <section class="cart">
-            <h2 class="cart-title">my cart</h2>
-            <div class="cart-content">
-            </div>
-            <div class="cart-end">
-            </div>
+            <!-- TITLE -->
+            <h1 class="cart-title">my cart</h1>
+            <!-- CONTENT -->
+            <div class="cart-content"></div>
+            <!-- CONTENT END -->
+            <div class="cart-end"></div>
         </section>
     </main>
     <!-- TEMPLATE CART PRODUCT -->
@@ -57,11 +59,11 @@
         <div class="cart-product">
             <!-- IMAGE -->
             <picture class="cart-picture">
-                <img src="../img/product-1.webp" alt="jordan class=" cart-image">
+                <img src="../img/product-1.webp" alt="jordan class=">
             </picture>
             <!-- INFO -->
             <article class="cart-art">
-                <h3 class="cart-name">turbo green</h3>
+                <h2 class="cart-name">turbo green</h2>
                 <span class="cart-color">black / white</span>
                 <span class="cart-price">123 USD</span>
             </article>
@@ -98,14 +100,14 @@
         </div>
         <!-- INFO -->
         <article class="cart-buy">
-            <h3 class="cart-total">total</h3>
+            <h2 class="cart-total">total</h2>
             <span class="cart-description">(8) products</span>
             <span class="cart-price">236 USD</span>
         </article>
         <a href="https://wa.link/0lobkl" target="_blank" class="cart-checkout">checkout</a>
     </template>
     <!-- LIBRARY TOASTIFY -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- SCRIPTS -->
     <script src="../js/components/global.js"></script>
     <script src="../js/components/cart/add.js"></script>
