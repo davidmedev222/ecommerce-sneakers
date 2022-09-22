@@ -454,19 +454,19 @@ svg {
     border-radius: 3rem;
     padding: 1em 2em; }
   .products-window {
-    display: none;
     width: 100vw;
-    height: 100vh;
+    height: 0;
     position: fixed;
     top: 0;
     left: 0;
     background-color: var(--background-primary);
     overflow-y: scroll;
-    z-index: 2; }
+    z-index: 2;
+    transition: height 1250ms ease; }
     .products-window::-webkit-scrollbar {
       width: 0.5rem; }
     .products-window-visibility {
-      display: block; }
+      height: 100vh; }
     .products-window-content {
       display: grid;
       justify-items: center;
