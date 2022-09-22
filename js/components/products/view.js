@@ -16,10 +16,10 @@ const productsView = (contenido) => {
         clonProducts.querySelector(".products-btn").dataset.color = cadaProduct.color;
         clonProducts.querySelector(".products-btn").dataset.id = cadaProduct.id;
         //? ADJUNTO EL CLON MODIFICADO AL FRAGMENT PRODUCTS
-        fragmentProducts.appendChild(clonProducts);
+        fragmentProducts.append(clonProducts);
     });
     //? ADJUNTO EL FRAGMENT COMPLETO AL NODO PRODUCTS CONTENT
-    nodoProductsContent.appendChild(fragmentProducts);
+    nodoProductsContent.append(fragmentProducts);
 };
 //* FUNCION PARA MOSTRAR PESTAÑA FLOTANTE
 const windowView = (ev) => {
@@ -55,8 +55,8 @@ const productsWindowView = (content) => {
         clonWindow.querySelector(".products-window-location").textContent = elProduct.location;
         clonWindow.querySelector(".products-window-launch").textContent = elProduct.launch;
         //? ADJUNTO EL CLON MODIFICADO AL FRAGMENT WINDOW
-        fragmentWindow.appendChild(clonWindow);
+        fragmentWindow.append(clonWindow);
     });
     //? ADJUNTO EL FRAGMENT COMPLETO AL NODO WINDOW CONTENT
-    nodoWindowContent.appendChild(fragmentWindow);
+    nodoWindowContent.append(fragmentWindow);
 };

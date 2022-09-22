@@ -23,10 +23,10 @@ const cartView = () => {
         AttributeDataId(clonCartProduct, ".cart-btn", 1, cadaProduct);
         AttributeDataId(clonCartProduct, ".cart-btn", 2, cadaProduct);
         //? ADJUNTO EL CLON MODIFICADO AL FRAGMENT CART PRODUCT
-        fragmentCartProduct.appendChild(clonCartProduct);
+        fragmentCartProduct.append(clonCartProduct);
     });
     //? ADJUNTO EL FRAGMENT COMPLETO AL NODO CART CONTENT
-    nodoCartContent.appendChild(fragmentCartProduct);
+    nodoCartContent.append(fragmentCartProduct);
     //? METODO PARA CALCULAR EL PRECIO TOTAL DE TODOS LOS PRODUCTOS
     const cartTotal = cart.reduce((acumulador, element) => acumulador + element.price * element.quantity, 0);
     //? CLONACION DEL TEMPLATE CART END
@@ -34,9 +34,9 @@ const cartView = () => {
     clonCartEnd.querySelector(".cart-description").textContent = `(${cart.length}) products`;
     clonCartEnd.querySelector(".cart-price").textContent = `${cartTotal} USD`;
     //? ADJUNTO EL CLON MODIFICADO AL FRAGMENT CART END
-    fragmentCartEnd.appendChild(clonCartEnd);
+    fragmentCartEnd.append(clonCartEnd);
     //? ADJUNTO EL FRAGMENT COMPLETO AL NODO CART END
-    nodoCartEnd.appendChild(fragmentCartEnd);
+    nodoCartEnd.append(fragmentCartEnd);
 };
 
 //* FUNCION VISUALIZAR CARRITO SI EXISTEN PRODUCTOS

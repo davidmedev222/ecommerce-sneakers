@@ -25,3 +25,15 @@ document.addEventListener("click", (ev) => {
     //? EVENTO PARA EL NODO GENERAR ORDEN DE COMPRA
     ev.target.matches(".faq-generate") && faq();
 });
+
+//* EVENTO SCROLL PARA LA PESTAÑA DEL SITIO
+window.addEventListener("scroll", () => {
+    //? VARIABLE IGUAL AL VALOR DEL SCROLL DEL EJE Y
+    const headerScroll = window.scrollY;
+    //? ALTERNAR CLASE SI LA CONDICION SE CUMPLE
+    nodoHeader.classList.toggle("header-sticky", headerScroll <= headerScrollDefault);
+    //? VALOR DE LA VARIABLE ACTUALIZADO
+    headerScrollDefault = headerScroll;
+    //? EJECUTAR SOLAMENTE SI EL SCROLL DEL EJE Y ES IGUAL A 0
+    window.scrollY === 0 && nodoHeader.classList.remove("header-sticky");
+});

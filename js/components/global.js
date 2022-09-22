@@ -21,3 +21,7 @@ const AttributeDataId = (clon, btn, indice, product) => {
     clon.querySelectorAll(`${btn} svg`)[indice].dataset.id = product.id;
     clon.querySelectorAll(`${btn} svg path`)[indice].dataset.id = product.id;
 };
+
+//* NODO Y SCROLL A UTILIZAR DEL HEADER
+const nodoHeader = document.querySelector(".header");
+let headerScrollDefault = 0;
