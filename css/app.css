@@ -124,11 +124,9 @@ svg {
   align-items: center;
   grid-template: "logo nav cart" auto / 1fr 1fr 1fr;
   position: sticky;
-  top: -15%;
+  top: -100%;
   z-index: 1;
-  padding: clamp(0.5rem, 1rem, 2rem);
-  transition-property: top, background-color;
-  transition: 250ms ease; }
+  padding: clamp(0.5rem, 1rem, 2rem); }
   .header-logo {
     grid-area: logo;
     width: clamp(3.5rem, 5.5vw, 11rem); }
@@ -148,7 +146,8 @@ svg {
     padding: 0.25em; }
   .header-sticky {
     background-color: var(--background-primary);
-    top: 0; }
+    top: 0;
+    transition: top 550ms ease; }
 
 .nav-ul {
   display: flex;
