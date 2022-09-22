@@ -30,12 +30,6 @@ const cartNotification = (message) => {
         text: message,
         duration: 3000,
         position: "right",
-        // style: {
-        //     background: "#181818",
-        //     color: "#e6e6e6",
-        //     fontSize: "1rem",
-        //     fontWeight: "600",
-        // },
         className: "toastify",
     }).showToast();
 };
