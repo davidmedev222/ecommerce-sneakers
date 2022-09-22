@@ -118,6 +118,37 @@ svg {
   width: 100%;
   fill: currentColor; }
 
+[data-fade] {
+  animation: fade 2500ms forwards; }
+
+@keyframes fade {
+  0% {
+    transform: translateY(20%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+[data-delay="300"] {
+  animation-delay: 300ms; }
+
+[data-delay="500"] {
+  animation-delay: 500ms; }
+
+[data-delay="700"] {
+  animation-delay: 700ms; }
+
+[data-delay="900"] {
+  animation-delay: 900ms; }
+
+[data-delay="1100"] {
+  animation-delay: 1100ms; }
+
+[data-delay="1300"] {
+  animation-delay: 1300ms; }
+
+[data-delay="1500"] {
+  animation-delay: 1500ms; }
+
 .header {
   display: grid;
   justify-items: center;
@@ -478,7 +509,8 @@ svg {
       position: absolute;
       top: 5%;
       right: 5%;
-      width: clamp(3rem, 5vw, 10rem); }
+      width: clamp(3rem, 5vw, 10rem);
+      z-index: 1; }
     .products-window-picture {
       grid-area: images; }
     .products-window-info {
@@ -488,10 +520,12 @@ svg {
       justify-content: center;
       align-items: center; }
     .products-window-collection, .products-window-color, .products-window-designer, .products-window-location, .products-window-launch {
+      opacity: 0;
       font-size: clamp(0.75rem, 1.5vw, 3rem);
       font-weight: bold;
       color: grey; }
     .products-window-name, .products-window-price {
+      opacity: 0;
       font-size: clamp(2.5rem, 5vw, 10rem);
       font-weight: bold; }
     .products-window-details {
