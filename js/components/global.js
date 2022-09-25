@@ -25,3 +25,13 @@ const AttributeDataId = (clon, btn, indice, product) => {
 //* NODO Y SCROLL A UTILIZAR DEL HEADER
 const nodoHeader = document.querySelector(".header");
 let headerScrollDefault = 0;
+
+//* FUNCIONES PARA LOADING DEL SITIO
+const loadingClose = () => {
+    //? SE AGREGA LA CLASE AL NODO CON LA CLASE LOADING
+    document.querySelector(".loading").classList.add("loading-visibility");
+};
+const loadingDelete = () => {
+    //? SE AGREGA LA CLASE AL NODO CON LA CLASE LOADING
+    document.querySelector(".loading").classList.add("loading-delete");
+};

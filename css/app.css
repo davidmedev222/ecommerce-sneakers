@@ -594,3 +594,37 @@ svg {
       display: block; }
   .faq-strong {
     color: black; }
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.5rem, 1vw, 2rem);
+  position: fixed;
+  background-color: black;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 500ms ease 2500ms; }
+  .loading-content {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: white;
+    animation: loading 2500ms forwards; }
+
+@keyframes loading {
+  25% {
+    transform: translateX(300%); }
+  50% {
+    transform: translateX(-300%); }
+  75% {
+    transform: translateX(300%); } }
+  .loading-content:nth-child(2) {
+    animation-direction: reverse; }
+  .loading-visibility {
+    opacity: 0; }
+  .loading-delete {
+    display: none; }

@@ -37,3 +37,10 @@ window.addEventListener("scroll", () => {
     //? EJECUTAR SOLAMENTE SI EL SCROLL DEL EJE Y ES IGUAL A 0
     window.scrollY === 0 && nodoHeader.classList.remove("header-sticky");
 });
+
+//* EVENTO LOAD PARA LA PESTAÑA DEL SITIO
+window.addEventListener("load", (ev) => {
+    //? EJECUTAR DELETE LOADING DESPUES DE 750 MILISEGUNDOS
+    setTimeout(loadingClose, 500);
+    setTimeout(loadingDelete, 4500);
+});
