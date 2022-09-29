@@ -42,5 +42,5 @@ window.addEventListener("scroll", () => {
 window.addEventListener("load", (ev) => {
     //? EJECUTAR DELETE LOADING DESPUES DE 750 MILISEGUNDOS
     setTimeout(loadingClose, 500);
-    setTimeout(loadingDelete, 4500);
+    setTimeout(loadingDelete, 3250);
 });
